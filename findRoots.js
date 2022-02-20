@@ -1,5 +1,6 @@
+'use strict';
 
-const findRoots = (a, b, c) => {
+const findRoots = ([a, b, c]) => {
     let D = b * b - 4 * a * c;
     if ( isNaN(D) ) {
         console.log("Incorrect input");
@@ -15,4 +16,4 @@ const findRoots = (a, b, c) => {
     }
 }
 
-module.exports = {findRoots}
+module.exports = findRoots;
