@@ -10,7 +10,7 @@ const readFile = (fileName) => {
         const fileArgs = fs.readFileSync(fileName, "utf-8");
         if (validRegex.test(fileArgs)) {
             const numbersArr = fileArgs.split(" ");
-            const argsArr = numbersArr.map(arg => parseInt(arg));
+            const argsArr = numbersArr.map(arg => parseFloat(arg));
             if (argsArr[0] === 0) {
                 console.log(`Arg "a" cannot equal 0.`);
                 return false;

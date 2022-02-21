@@ -5,7 +5,7 @@ const prompt = require("prompt-sync")();
 const inputFromConsole = (arg) => {
     while (true) {
         const coeff = prompt(`Enter ${arg}: `);
-        const coeffValue = parseInt(coeff);
+        const coeffValue = parseFloat(coeff);
         if (arg === "a" && coeffValue === 0) {
             console.log(`Arg "a" cannot equal 0`);
         } else if (isNaN(coeffValue)) {
