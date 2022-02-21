@@ -21,7 +21,6 @@ const storeCoeffs = (...args) => {
         const value = inputFromConsole(coeff);
         valuesArr.push(value);
     });
-    //console.log(valuesArr);
     return valuesArr;
 };
 
