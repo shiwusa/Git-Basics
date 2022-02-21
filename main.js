@@ -13,11 +13,15 @@ const mode = () => {
         mode();
     } else if (progMode === 2) {
         const argsArr = nonInteractive();
+        if (argsArr === false){
+            mode();
+        } else {
         findRoots(argsArr);
         mode();
+        }
     } else {
-        console.log("Invalid mode. Try once more: ");
-        mode();
+        console.log("Program stopped");
+        process.exit(1);
     }
 }
  mode();

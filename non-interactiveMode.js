@@ -13,14 +13,16 @@ const readFile = (fileName) => {
             const argsArr = numbersArr.map(arg => parseInt(arg));
             if (argsArr[0] === 0) {
                 console.log(`Arg "a" cannot equal 0.`);
-                return;
+                return false;
             }
-            console.log(argsArr);
+            return argsArr;
         } else {
             console.log("Smth wrong with file content");
+            return false;
         }
     } catch (err) {
         console.log("Cannot find this file.");
+        return false;
     }
 }
 
